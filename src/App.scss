@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.nav-bar {
+  background-color: #222222;
+  &__logo {
+    margin-left: 20px;
+    & img {
+      max-width: 180px;
+      padding: 24px 0px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex: 1;
+  }
+  &__link-group {
+    display: flex;
+  }
+  &__ctas {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    & img {
+      width: 20px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+  }
+}
+.nav-item {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  padding: 0px 18px;
+
+  & svg {
+    width: 14px;
+  }
+  .modal {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+}
+.cta-btn {
+  width: fit-content;
+  padding: 10px 15px;
+  border: 0px solid white;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 2.5px;
+  transition: 0.4s ease-in-out;
+  outline: .5px solid white;
+  
+  &:hover {
+    
+    border: .5px solid white;
+  }
+}
+
+// Hero
+.hero {
+  background: url("../public/images/asset 53.png") #000000;
+  background-size: contain; 
+  background-repeat: no-repeat;
+  height: 700px;
+  padding-top: 100px;
+  @media screen and (min-width: 1920px) {
+    background-size: cover; 
+    background-position: center;
+  }
+    
+  
+  &__content{
+    max-width: 870px;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+    color:white;
+    & h1{
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      margin-top:50px;
+      
+    }
+    & p{
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+  }
+}
+.text-fader{
+
+  display: inline-block;
+  height: 54px;
+  width:fit-content;
+  & h1{
+
+    display: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+
+  }
+}
+
+.btn-group{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap:40px;
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+  }
+    
+}
+
+// Utility classes
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.flap {
+  transition: 0.4s;
+  transform: rotateX(180deg);
+}
+.lg{
+  padding: 15px 32px;
+}
+.decorated{
+  background: linear-gradient(to right, #ED1F69,#F0592A, #ED1F69);
+  background-size: 200% 100%;
+  background-position: right center;
+  border: none;
+  outline: none;
+  transition: 0.5s ease-in-out;
+  &:hover{
+    background-position: left center;
+    border: none;
+  }
+}
+.text-fader h1.fadeupin{
+  display: inline-block;
+  animation:fadeUpIn 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+
