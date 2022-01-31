@@ -1,19 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;800&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .nav-bar {
   background-color: #222222;
   &__logo {
-    margin-left: 20px;
     & img {
       max-width: 180px;
       padding: 24px 0px;
+      
+      @media screen and (max-width:1024px) {
+        padding: 18px 0px;
+       
+      }
+      
     }
   }
   &__links {
@@ -27,12 +32,31 @@
     display: flex;
     margin-left: auto;
     align-items: center;
-    & img {
+    img,svg {
       width: 20px;
+    }
+    svg{
+      margin-left: 20px;
+      display: none;
+      @media screen and (max-width:1024px) {
+        display: block;
+              
+      }
+    }
+    
+    .cta-btn{
+      
+      @media screen and (max-width:1024px) {
+        display: none;
+      }
     }
   }
   &__wrapper {
     display: flex;
+  }
+
+  @media screen and (max-width:1024px) {
+    
   }
 }
 .nav-item {
@@ -41,8 +65,15 @@
   text-decoration: none;
   align-items: center;
   gap: 5px;
-  font-weight: bold;
+  font-weight: 500;
   padding: 0px 18px;
+  transition: 0.2s;
+  @media screen and (max-width:1128px) {
+    padding: 0px 13px;
+  }
+  @media screen and (max-width:1024px) {
+    display: none;
+  }
 
   & svg {
     width: 14px;
@@ -66,42 +97,54 @@
   text-transform: uppercase;
   border-radius: 2.5px;
   transition: 0.4s ease-in-out;
-  outline: .5px solid white;
-  
+  outline: 0.5px solid white;
+
   &:hover {
-    
-    border: .5px solid white;
+    border: 0.5px solid white;
   }
 }
 
 // Hero
 .hero {
   background: url("../public/images/asset 53.png") #000000;
-  background-size: contain; 
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 700px;
+  
   padding-top: 100px;
   @media screen and (min-width: 1920px) {
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
   }
-    
-  
-  &__content{
+  @media screen and (max-width: 1024px) {
+    background: url("../public/images/tablet-background.png") #000000;
+    padding-top: 80px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &__content {
     max-width: 870px;
     padding: 0 15px;
     margin: 0 auto;
     text-align: center;
-    color:white;
-    & h1{
+    color: white;
+    & h1 {
       font-size: 54px;
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 30px;
-      margin-top:50px;
-      
+      margin-top: 90px;
+      @media screen and (max-width: 1024px) {
+        font-size: 40px;
+        margin-top: 70px;
+      }
+      @media screen and (max-width: 640px) {
+        font-size: 36px;
+        
+      }
     }
-    & p{
+    & p {
       font-size: 15px;
       line-height: 1.5;
       font-weight: 400;
@@ -109,30 +152,149 @@
     }
   }
 }
-.text-fader{
-
+.text-fader {
   display: inline-block;
   height: 54px;
-  width:fit-content;
-  & h1{
-
+  width: fit-content;
+  & h1 {
     display: none;
     margin: 0;
     opacity: 0;
     padding: 0;
-
   }
 }
 
-.btn-group{
+.btn-group {
   display: flex;
   width: 100%;
   justify-content: center;
-  gap:40px;
+  gap: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
   @media screen and (max-width: 620px) {
     flex-direction: column;
   }
+}
+.organizations {
+  padding-bottom: 50px;
+
+  & p {
+    color: #eeeeee;
+    font-weight: 500;
+  }
+  & .icons {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    div{
+      min-width: 150px;
+    }
+  }
+}
+// spacer
+.spacer {
+  height: 150px;
+  background-color: #000000;
+  &__gradient {
+    height: 100%;
+    width: 6px;
+    margin: auto;
+    background: linear-gradient(to bottom, #ec008c, #f15b2a, rgba(0, 0, 0, 0));
+  }
+}
+// Technology Section
+.Technology {
+  background: #000000;
+  color: white;
+  & .container {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    @media screen and (max-width:1024px) {
+      flex-direction: column;
     
+      
+    }
+  }
+  & .card-container {
+    flex: 4.3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width:1024px) {
+      order:2;
+      
+      
+    }
+    @media screen and (max-width:575px) {
+      grid-template-columns: 1fr;
+      
+      
+    }
+  }
+  & .card {
+    margin: 20px;
+    background-color: #222222;
+    position: relative;
+    padding: 20px 30px;
+    border-radius: 10px;
+    & .pink-text {
+      margin-bottom: 5px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    & > h1 {
+      font-size: 23px;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+    & > p {
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 15px;
+      & .greyed {
+        color: #aaaaaa;
+      }
+    }
+    & .text-btn{
+      margin-bottom: 10px;
+    }
+
+    & img {
+      width: 90px;
+      position: absolute;
+      top: 0px;
+      right: -10px;
+    }
+  }
+  & .text-section {
+    flex: 3;
+    padding: 50px 20px;
+    &>*+*{
+      margin-top: 20px;
+    }
+    .pink-text{
+      font-size:15px;
+    }
+    p{
+      color: #eeeeee;
+      font-size: 17px;
+      font-weight: 300;
+    }
+    h1{
+      br{
+        @media screen and (max-width: 620px) {
+          display: none;
+        }
+        
+      }
+    }
+    
+    @media screen and (max-width:1024px) {
+      order:1;
+      padding:50px 0px;
+    }
+  }
 }
 
 // Utility classes
@@ -145,24 +307,45 @@
   transition: 0.4s;
   transform: rotateX(180deg);
 }
-.lg{
+.lg {
   padding: 15px 32px;
 }
-.decorated{
-  background: linear-gradient(to right, #ED1F69,#F0592A, #ED1F69);
+.pink-text {
+  color: #ec008c;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.text-btn {
+  display: flex;
+  h1 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 0;
+    transition: 0.4s ease-in-out;
+  }
+  svg{
+    width:17px;
+    fill: #ec008c;
+  }
+  &:hover h1{
+    margin-right: 5px;
+  }
+}
+.decorated {
+  background: linear-gradient(to right, #ed1f69, #f0592a, #ed1f69);
   background-size: 200% 100%;
   background-position: right center;
   border: none;
   outline: none;
   transition: 0.5s ease-in-out;
-  &:hover{
+  &:hover {
     background-position: left center;
     border: none;
   }
 }
-.text-fader h1.fadeupin{
+.text-fader h1.fadeupin {
   display: inline-block;
-  animation:fadeUpIn 0.5s ease-in-out;
+  animation: fadeUpIn 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 @keyframes fadeUpIn {
@@ -175,5 +358,3 @@
     transform: translateY(0);
   }
 }
-  
-

@@ -19,7 +19,7 @@ const NavBar = () => {
                   key={index}
                   modal={modal}
                   setModal={setModal}
-                  />
+                />
               );
             })}
             <a href="#" className="nav-item">
@@ -32,11 +32,17 @@ const NavBar = () => {
               alt="search"
               className="search"
             />
-            <NavWModal
-              name="Sign In"
-              modal={modal}
-              setModal={setModal}
-            />
+            <svg
+              viewBox="0 0 350 241"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="350" height="40" fill="white" />
+              <rect y="201" width="350" height="40" fill="white" />
+              <rect x="121" y="100" width="229" height="41" fill="white" />
+            </svg>
+
+            <NavWModal name="Sign In" modal={modal} setModal={setModal} />
             <div className="cta-btn">try for free</div>
           </div>
         </div>
@@ -45,27 +51,25 @@ const NavBar = () => {
   );
 };
 
-function NavWModal({ name, modal,setModal }) {
+function NavWModal({ name, modal, setModal }) {
   const [flap, setFlap] = React.useState(false);
-  useEffect(()=>{
-    if(name===modal){
+  useEffect(() => {
+    if (name === modal) {
       setFlap(true);
-    }
-    else if (name !== modal) {
+    } else if (name !== modal) {
       setFlap(false);
       console.log(`not equall to ${name}`);
     }
-  },[setModal,modal])
-  function handleClick(){
+  }, [setModal, modal]);
+  function handleClick() {
     setModal(name);
     console.log(`clicked`);
-    if((name ===modal)===true && flap===true){
-      setModal('off');
+    if ((name === modal) === true && flap === true) {
+      setModal("off");
       console.log(`off`);
     }
-
   }
-  
+
   return (
     <a href="#" className="nav-item" onClick={handleClick}>
       {name}{" "}
