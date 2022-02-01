@@ -4,6 +4,7 @@ import NavBar from './components/navbar'
 import Hero from './components/hero/'
 import Spacer from './components/spacer'
 import TechnologySection from './components/Technologies'
+import FeatureSection from './components/features'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Hero/>
       <Spacer/>
       <TechnologySection/>
+      <FeatureSection/>
     </div>
   )
 }

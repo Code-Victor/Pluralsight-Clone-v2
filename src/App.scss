@@ -13,12 +13,10 @@
     & img {
       max-width: 180px;
       padding: 24px 0px;
-      
-      @media screen and (max-width:1024px) {
+
+      @media screen and (max-width: 1024px) {
         padding: 18px 0px;
-       
       }
-      
     }
   }
   &__links {
@@ -32,21 +30,20 @@
     display: flex;
     margin-left: auto;
     align-items: center;
-    img,svg {
+    img,
+    svg {
       width: 20px;
     }
-    svg{
+    svg {
       margin-left: 20px;
       display: none;
-      @media screen and (max-width:1024px) {
+      @media screen and (max-width: 1024px) {
         display: block;
-              
       }
     }
-    
-    .cta-btn{
-      
-      @media screen and (max-width:1024px) {
+
+    .cta-btn {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }
@@ -55,8 +52,7 @@
     display: flex;
   }
 
-  @media screen and (max-width:1024px) {
-    
+  @media screen and (max-width: 1024px) {
   }
 }
 .nav-item {
@@ -68,10 +64,10 @@
   font-weight: 500;
   padding: 0px 18px;
   transition: 0.2s;
-  @media screen and (max-width:1128px) {
+  @media screen and (max-width: 1128px) {
     padding: 0px 13px;
   }
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 
@@ -109,7 +105,7 @@
   background: url("../public/images/asset 53.png") #000000;
   background-size: contain;
   background-repeat: no-repeat;
-  
+
   padding-top: 100px;
   @media screen and (min-width: 1920px) {
     background-size: cover;
@@ -118,7 +114,7 @@
   @media screen and (max-width: 1024px) {
     background: url("../public/images/tablet-background.png") #000000;
     padding-top: 80px;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
   }
@@ -141,7 +137,6 @@
       }
       @media screen and (max-width: 640px) {
         font-size: 36px;
-        
       }
     }
     & p {
@@ -187,7 +182,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    div{
+    div {
       min-width: 150px;
     }
   }
@@ -205,31 +200,36 @@
 }
 // Technology Section
 .Technology {
-  background: #000000;
+  background: url(../public/images/bkgd-triangle-right.png),
+    url(../public/images/bkgd-triangle-right2.png),
+    url(../public/images/bkgd-triangle-left.png),
+    #000000;
+  
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right,right, left;
+  background-size: contain;
+  @media screen and (max-width:1024px) {
+    background-size: auto;
+  }
+
   color: white;
   & .container {
     display: flex;
     padding-top: 50px;
     padding-bottom: 100px;
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width: 1024px) {
       flex-direction: column;
-    
-      
     }
   }
   & .card-container {
     flex: 4.3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    @media screen and (max-width:1024px) {
-      order:2;
-      
-      
+    @media screen and (max-width: 1024px) {
+      order: 2;
     }
-    @media screen and (max-width:575px) {
+    @media screen and (max-width: 575px) {
       grid-template-columns: 1fr;
-      
-      
     }
   }
   & .card {
@@ -256,7 +256,7 @@
         color: #aaaaaa;
       }
     }
-    & .text-btn{
+    & .text-btn {
       margin-bottom: 10px;
     }
 
@@ -270,30 +270,107 @@
   & .text-section {
     flex: 3;
     padding: 50px 20px;
-    &>*+*{
+    & > * + * {
       margin-top: 20px;
     }
-    .pink-text{
-      font-size:15px;
+    .pink-text {
+      font-size: 15px;
     }
-    p{
+    p {
       color: #eeeeee;
       font-size: 17px;
       font-weight: 300;
     }
-    h1{
-      br{
+    h1 {
+      br {
         @media screen and (max-width: 620px) {
           display: none;
         }
-        
       }
     }
-    
-    @media screen and (max-width:1024px) {
-      order:1;
-      padding:50px 0px;
+
+    @media screen and (max-width: 1024px) {
+      order: 1;
+      padding: 50px 0px;
     }
+  }
+}
+
+// Features Section
+.Features {
+  background: #181818;
+  color: #eeeeee;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .container > * + * {
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 31px;
+  }
+}
+
+.feature-card {
+  padding: 50px 30px;
+  background: #222222;
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 20px 30px -15px;
+  border-radius: 20px;
+  margin: 15px;
+
+  img {
+    height: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  & > * + * {
+    margin-top: 20px;
+  }
+}
+.main-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+  .feature-card {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+    padding: clamp(25px, calc(1.8vw + 5px), 50px) 30px;
+
+    box-shadow: none;
+    @media screen and (max-width: 1024px) {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+  .main-card-img {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 1024px) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+.S-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -317,17 +394,18 @@
 }
 .text-btn {
   display: flex;
+  align-items: center;
   h1 {
     font-size: 17px;
     font-weight: 400;
     margin-right: 0;
     transition: 0.4s ease-in-out;
   }
-  svg{
-    width:17px;
+  svg {
+    width: 17px;
     fill: #ec008c;
   }
-  &:hover h1{
+  &:hover h1 {
     margin-right: 5px;
   }
 }
