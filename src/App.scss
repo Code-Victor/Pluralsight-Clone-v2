@@ -33,6 +33,7 @@
     img,
     svg {
       width: 20px;
+      cursor: pointer;
     }
     svg {
       margin-left: 20px;
@@ -86,6 +87,7 @@
 }
 .cta-btn {
   width: fit-content;
+  cursor: pointer;
   padding: 10px 15px;
   border: 0px solid white;
   font-weight: 500;
@@ -94,15 +96,11 @@
   border-radius: 2.5px;
   transition: 0.4s ease-in-out;
   outline: 0.5px solid white;
-
-  &:hover {
-    border: 0.5px solid white;
-  }
 }
 
 // Hero
 .hero {
-  background: url("../public/images/asset 53.png") #000000;
+  background: url("./images/asset 53.png") #000000;
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -112,7 +110,7 @@
     background-position: center;
   }
   @media screen and (max-width: 1024px) {
-    background: url("../public/images/tablet-background.png") #000000;
+    background: url("./images/tablet-background.png") #000000;
     padding-top: 80px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -200,15 +198,14 @@
 }
 // Technology Section
 .Technology {
-  background: url(../public/images/bkgd-triangle-right.png),
-    url(../public/images/bkgd-triangle-right2.png),
-    url(../public/images/bkgd-triangle-left.png),
+  background: url(./images/bkgd-triangle-right.png),
+    url(./images/bkgd-triangle-right2.png), url(./images/bkgd-triangle-left.png),
     #000000;
-  
+
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right,right, left;
+  background-position: bottom right, right, left;
   background-size: contain;
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     background-size: auto;
   }
 
@@ -374,6 +371,86 @@
   }
 }
 
+// Discovery Section
+.discovery {
+  background-color: #000000;
+  color: #eeeeee;
+  padding-top: 100px;
+
+  .container > * + * {
+    margin-top: 20px;
+  }
+  .discover-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(12px, 1%, 18px);
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+    .discover-card {
+      img {
+        max-width: 100%;
+        border-radius: 15px;
+      }
+      h1 {
+        color: #ffba0e;
+        font-size: 16px;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 300;
+      }
+      & > * + * {
+        margin-top: 20px;
+      }
+    }
+  }
+  .vmware {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+    .vm-image {
+      background: url("./images/asset 57.png");
+      background-position: center;
+      background-size: cover;
+    }
+    .vm-text-container {
+      background: linear-gradient(
+        100.37deg,
+        rgb(236, 0, 139) 0%,
+        rgb(241, 90, 34) 100%
+      );
+      display: flex;
+      justify-content: center;
+      padding: 100px 15px;
+      div {
+        max-width: 780px;
+        img {
+          max-width: 120px;
+          margin-bottom: 30px;
+        }
+        h1 {
+          margin-bottom: 20px;
+          font-size: 29px;
+        }
+        p {
+          font-weight: 300;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    @media screen and (max-width:1024px) {
+      grid-template-columns: 1fr;
+      .vm-image{
+        height: 450px;
+      }
+    }
+  }
+}
+
 // Utility classes
 .container {
   max-width: 1400px;
@@ -419,6 +496,15 @@
   &:hover {
     background-position: left center;
     border: none;
+  }
+}
+.darkend {
+  background: #181818;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  &:hover {
+    box-shadow: 0px 10px 40px #181818;
   }
 }
 .text-fader h1.fadeupin {

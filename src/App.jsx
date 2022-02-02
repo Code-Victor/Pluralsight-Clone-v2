@@ -5,6 +5,7 @@ import Hero from './components/hero/'
 import Spacer from './components/spacer'
 import TechnologySection from './components/Technologies'
 import FeatureSection from './components/features'
+import DiscoverSection from './components/discover'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Spacer/>
       <TechnologySection/>
       <FeatureSection/>
+      <DiscoverSection/>
     </div>
   )
 }
