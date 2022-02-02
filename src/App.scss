@@ -100,7 +100,7 @@
 
 // Hero
 .hero {
-  background: url("./images/asset 53.png") #000000;
+  background: url("../public/images/asset 53.png") #000000;
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -110,7 +110,7 @@
     background-position: center;
   }
   @media screen and (max-width: 1024px) {
-    background: url("./images/tablet-background.png") #000000;
+    background: url("../public/images/tablet-background.png") #000000;
     padding-top: 80px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -198,8 +198,8 @@
 }
 // Technology Section
 .Technology {
-  background: url(./images/bkgd-triangle-right.png),
-    url(./images/bkgd-triangle-right2.png), url(./images/bkgd-triangle-left.png),
+  background: url(../public/images/bkgd-triangle-right.png),
+    url(../public/images/bkgd-triangle-right2.png), url(../public/images/bkgd-triangle-left.png),
     #000000;
 
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -413,7 +413,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 100px;
     .vm-image {
-      background: url("./images/asset 57.png");
+      background: url("../public/images/asset 57.png");
       background-position: center;
       background-size: cover;
     }
