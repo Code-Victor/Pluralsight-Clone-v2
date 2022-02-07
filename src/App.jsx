@@ -6,6 +6,7 @@ import Spacer from './components/spacer'
 import TechnologySection from './components/Technologies'
 import FeatureSection from './components/features'
 import DiscoverSection from './components/discover'
+import TestimonialSection from './components/testimonials'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <TechnologySection/>
       <FeatureSection/>
       <DiscoverSection/>
+      <TestimonialSection/>
     </div>
   )
 }

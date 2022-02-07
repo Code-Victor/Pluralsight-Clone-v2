@@ -1,17 +1,23 @@
 {
   "name": "pluralsight-clone",
+  "homepage": "https://code-victor.github.io/Pluralsight-Clone-v2",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "gh-pages": "^3.2.3",
     "node-sass": "^7.0.1",
     "sass": "^1.49.0",
     "vite": "^2.7.2"

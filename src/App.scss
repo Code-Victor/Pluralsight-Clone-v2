@@ -450,6 +450,85 @@
     }
   }
 }
+// twitter-testimonial
+.testimonials{
+  background-color: #000000;
+}
+.skill{
+  color:white
+}
+.twitter-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin:0 15px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  min-height: 250px;
+
+  &__header{
+    display: flex;
+    gap:20px;
+    .avatar{
+      width: 36px;
+      height: 36px;
+    }
+    h3{
+      color:#1c2022;
+      font-size: 14px;
+
+    }
+    h4{
+      color:#777777;
+      font-size: 12.6px;
+    }
+    h3:hover,h4:hover{
+      color:#55a4db
+    }
+  }
+  p{
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-size: 13.8px;
+    font-weight: 300;
+    flex: 1;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: left;
+    gap:10px;
+   
+      
+    .retweet{
+      position: relative;
+      p{
+        position: absolute;
+        top: -24px;
+        left: 18px;
+      }
+    }
+  }
+}
+.twitter-card-icon{
+  margin-right: 5px;
+  & img{
+    width: 18px;
+    height: 15px;
+    max-width: 100%;
+  }
+}
+.twitter-logo{
+  position: absolute;
+  top:16px;
+  right: 16px;
+  width:16px;
+  height: 16px;
+
+}
+// .testimonials .container{
+//   display: flex;
+// }
 
 // Utility classes
 .container {
@@ -460,6 +539,9 @@
 .flap {
   transition: 0.4s;
   transform: rotateX(180deg);
+}
+.centered{
+  text-align: center;
 }
 .lg {
   padding: 15px 32px;
