@@ -453,9 +453,34 @@
 // twitter-testimonial
 .testimonials{
   background-color: #000000;
+  padding: 100px 0px;
+  & >.pink-text{
+    font-size: 15px;
+  }
+  .skill{
+    margin-top: 20px;
+    font-size: 32px;
+    color:white
+  }
 }
-.skill{
-  color:white
+
+.slider-container{
+  padding:50px 0;
+
+}
+.slider{
+  display: flex !important;
+}
+.arrow-btn{
+  display: inline;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  & svg{
+    width:45px;
+    stroke:white
+  }
 }
 .twitter-card{
   position: relative;
@@ -474,17 +499,21 @@
       width: 36px;
       height: 36px;
     }
-    h3{
+    .display-name{
       color:#1c2022;
       font-size: 14px;
 
+      display: block;
+      text-decoration: none;
     }
-    h4{
+    .username{
       color:#777777;
       font-size: 12.6px;
+      text-decoration: none;
+      display: block;
     }
-    h3:hover,h4:hover{
-      color:#55a4db
+    .display-name:hover,.username:hover{
+      color:#55a4db;
     }
   }
   p{

@@ -7,8 +7,8 @@ function TwitterCard({ avatar, displayName, username, tweet, retweetCount }) {
       <div className="twitter-card__header">
         <img src={avatar} alt={displayName} className="avatar" />
         <div className="names">
-          <h3 className="display-name">{displayName}</h3>
-          <h4 className="username">{username}</h4>
+          <a className="display-name" href={`https://twitter.com/${username}`} target="_blank">{displayName}</a>
+          <a className="username" href={`https://twitter.com/${username}`} target="_blank">{'@'+username}</a>
         </div>
       </div>
       <p>{tweet}</p>

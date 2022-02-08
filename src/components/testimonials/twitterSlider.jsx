@@ -9,7 +9,7 @@ const tweets = [
   {
     avatar: "./images/asset 35.jpeg",
     displayName: "skyler",
-    username: "@SkylerDevops",
+    username: "SkylerDevops",
     tweet:
       'just finished "Automation with windows #Powershell Scripts"on @pluralsight from @JeffHicks. It wasy really well explained, learned a few things, definitely would recommend if you need to do some PS 😀',
     retweetCount: 1,
@@ -17,7 +17,7 @@ const tweets = [
   {
     avatar: "./images/asset 36.jpeg",
     displayName: "Javier Montero",
-    username: "@DataSlugger",
+    username: "DataSlugger",
     tweet:
       "I love the schedule reminders feature that @pluralsight has added (well not sure when, but today I saw that) you make more simple my life, good job guys. #learning https://t.co/OEEjxVQJbm",
     retweetCount: 3,
@@ -25,7 +25,7 @@ const tweets = [
   {
     avatar: "./images/asset 37.jpeg",
     displayName: "Kayode Omotoye",
-    username: "@kontrepid",
+    username: "kontrepid",
     tweet:
       "One reason I love @pluralsight training is how they cureate similar courses on a subject into a learning path. The diversity of content delivery & repetition of salient points by the SMEs helps to make the learning process efficient and memorable. Kudos to the team",
     retweetCount: 2,
@@ -33,7 +33,7 @@ const tweets = [
   {
     avatar: "./images/asset 38.jpeg",
     displayName: "Martin Therkelsen",
-    username: "@Mracket",
+    username: "Mracket",
     tweet:
       "Yesterday I passed the AZ-104 exam. @pluralsight courses are great to help prepare for these exams. #citrixctp",
     retweetCount: 1,
@@ -41,7 +41,7 @@ const tweets = [
   {
     avatar: "./images/asset 39.jpeg",
     displayName: "William Masci",
-    username: "@billver3",
+    username: "billver3",
     tweet:
       "just passed #Cisco DEVASC 200-901 exam! Tough exam,but it was aa great experience. I'm excited to be part of the #DevNet Class of 2020! Also big thanks to @nickrusso42518 for his amazig study plan and @pluralsight course. I highly recommend it if you're studying for DEVASC",
     retweetCount: 5,
@@ -49,7 +49,7 @@ const tweets = [
   {
     avatar: "./images/asset 40.jpeg",
     displayName: "judy",
-    username: "@judy_seyram",
+    username: "judy_seyram",
     tweet:
       "The best thing that happened to me in 2020 was #GADS2020 which introduced me to @pluralsight . My interest in IT and programming peaked when i joined the program and now i believe this is the career path I want to take. #womenintech #WomenWhoCode #Andela #Pluralsight #GADS https://t.co/oYchlj6V5w",
     retweetCount: 7,
@@ -61,20 +61,75 @@ function TwitterSlider() {
     slidesToShow: 3,
     slidesToScroll: 3,
     infinite: true,
-    
+    nextArrow:<RightChevron/>,
+    prevArrow:<LeftChevron/>,
+    responsive:[
+      {
+        breakpoint: 860,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+       }
+    ]
   };
-  const [sliderRef, setSliderRef] = useState(null)
+  const [sliderRef, setSliderRef] = useState(null);
+
+  function LeftChevron() {
+    return (
+      <button className="arrow-btn" onClick={sliderRef?.slickPrev}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+    );
+  }
+  function RightChevron() {
+    return (
+      <button className="arrow-btn" onClick={sliderRef?.slickPrev}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    );
+  }
   return (
     <div className="container">
       <div className="slider-container">
-        
-        
-        <Slider    ref={setSliderRef} {...sliderSettings}>
+        <Slider className="slider" ref={setSliderRef} {...sliderSettings} >
           {tweets.map((tweet) => {
             return <TwitterCard {...tweet} key={uuidv4()} />;
           })}
         </Slider>
-        
       </div>
     </div>
   );
