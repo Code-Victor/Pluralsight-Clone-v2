@@ -19,7 +19,7 @@ const tweets = [
     displayName: "Javier Montero",
     username: "DataSlugger",
     tweet:
-      "I love the schedule reminders feature that @pluralsight has added (well not sure when, but today I saw that) you make more simple my life, good job guys. #learning https://t.co/OEEjxVQJbm",
+      "I love the schedule reminders feature that @pluralsight has added (well not sure when, but today I saw that) you make more simple my life, good job guys. #learning https://t.co/0EEjxVQJbm",
     retweetCount: 3,
   },
   {
@@ -51,34 +51,33 @@ const tweets = [
     displayName: "judy",
     username: "judy_seyram",
     tweet:
-      "The best thing that happened to me in 2020 was #GADS2020 which introduced me to @pluralsight . My interest in IT and programming peaked when i joined the program and now i believe this is the career path I want to take. #womenintech #WomenWhoCode #Andela #Pluralsight #GADS https://t.co/oYchlj6V5w",
+      "The best thing that happened to me in 2020 was #GADS2020 which introduced me to @pluralsight . My interest in IT and programming peaked when i joined the program and now i believe this is the career path I want to take. #womenintech #WomenWhoCode #Andela #Pluralsight #GADS https://t.co/oYchlj6V5W",
     retweetCount: 7,
   },
 ];
 function TwitterSlider() {
   const sliderSettings = {
-    
     slidesToShow: 3,
     slidesToScroll: 3,
     infinite: true,
-    nextArrow:<RightChevron/>,
-    prevArrow:<LeftChevron/>,
-    responsive:[
+    nextArrow: <RightChevron />,
+    prevArrow: <LeftChevron />,
+    responsive: [
       {
         breakpoint: 860,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-        }
+        },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        }
-       }
-    ]
+        },
+      },
+    ],
   };
   const [sliderRef, setSliderRef] = useState(null);
 
@@ -104,7 +103,7 @@ function TwitterSlider() {
   }
   function RightChevron() {
     return (
-      <button className="arrow-btn" onClick={sliderRef?.slickPrev}>
+      <button className="arrow-btn" onClick={sliderRef?.slickNext}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -125,7 +124,7 @@ function TwitterSlider() {
   return (
     <div className="container">
       <div className="slider-container">
-        <Slider className="slider" ref={setSliderRef} {...sliderSettings} >
+        <Slider className="slider" ref={setSliderRef} {...sliderSettings}>
           {tweets.map((tweet) => {
             return <TwitterCard {...tweet} key={uuidv4()} />;
           })}

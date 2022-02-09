@@ -479,7 +479,7 @@
   box-shadow: none;
   & svg{
     width:45px;
-    stroke:white
+    stroke:#6e6e6e
   }
 }
 .twitter-card{
@@ -490,7 +490,7 @@
   padding: 16px;
   border-radius: 5px;
   background-color: #ffffff;
-  min-height: 250px;
+  min-height: 240px;
 
   &__header{
     display: flex;
@@ -517,11 +517,19 @@
     }
   }
   p{
-    padding-top: 15px;
-    padding-bottom: 30px;
-    font-size: 13.8px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 12px;
     font-weight: 300;
     flex: 1;
+    line-height: 1.5;
+  }
+  .pink-text{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: none;
+    text-decoration: none;
+
   }
   &__bottom{
     display: flex;
@@ -542,8 +550,8 @@
 .twitter-card-icon{
   margin-right: 5px;
   & img{
-    width: 18px;
-    height: 15px;
+    width: 13.5px;
+    height: 12.5px;
     max-width: 100%;
   }
 }
@@ -551,7 +559,6 @@
   position: absolute;
   top:16px;
   right: 16px;
-  width:16px;
   height: 16px;
 
 }
