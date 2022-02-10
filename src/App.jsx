@@ -7,6 +7,8 @@ import TechnologySection from './components/Technologies'
 import FeatureSection from './components/features'
 import DiscoverSection from './components/discover'
 import TestimonialSection from './components/testimonials'
+import MarkettingSection from './components/marketting'
+import InsightSection from './components/insights'
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <FeatureSection/>
       <DiscoverSection/>
       <TestimonialSection/>
+      <MarkettingSection/>
+      <InsightSection/>
     </div>
   )
 }

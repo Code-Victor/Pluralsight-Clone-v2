@@ -199,8 +199,8 @@
 // Technology Section
 .Technology {
   background: url(../public/images/bkgd-triangle-right.png),
-    url(../public/images/bkgd-triangle-right2.png), url(../public/images/bkgd-triangle-left.png),
-    #000000;
+    url(../public/images/bkgd-triangle-right2.png),
+    url(../public/images/bkgd-triangle-left.png), #000000;
 
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: bottom right, right, left;
@@ -442,81 +442,81 @@
         }
       }
     }
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width: 1024px) {
       grid-template-columns: 1fr;
-      .vm-image{
+      .vm-image {
         height: 450px;
       }
     }
   }
 }
 // twitter-testimonial
-.testimonials{
+.testimonials {
   background-color: #000000;
   padding: 100px 0px;
-  & >.pink-text{
+  & > .pink-text {
     font-size: 15px;
   }
-  .skill{
+  .skill {
     margin-top: 20px;
     font-size: 32px;
-    color:white
+    color: white;
   }
 }
 
-.slider-container{
-  padding:50px 0;
-
+.slider-container {
+  padding: 50px 0;
 }
-.slider{
+.slider {
   display: flex !important;
 }
-.arrow-btn{
+.arrow-btn {
   display: inline;
   background-color: transparent;
   outline: none;
   border: none;
   box-shadow: none;
-  & svg{
-    width:45px;
-    stroke:#6e6e6e
+  & svg {
+    width: 45px;
+    stroke: #6e6e6e;
   }
 }
-.twitter-card{
+.twitter-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin:0 15px;
+  margin: 0 15px;
   padding: 16px;
   border-radius: 5px;
   background-color: #ffffff;
   min-height: 240px;
 
-  &__header{
+  &__header {
     display: flex;
-    gap:20px;
-    .avatar{
+    gap: 20px;
+    .avatar {
       width: 36px;
       height: 36px;
     }
-    .display-name{
-      color:#1c2022;
+    .display-name {
+      color: #1c2022;
       font-size: 14px;
 
       display: block;
       text-decoration: none;
     }
-    .username{
-      color:#777777;
+    .username {
+      color: #777777;
       font-size: 12.6px;
       text-decoration: none;
       display: block;
     }
-    .display-name:hover,.username:hover{
-      color:#55a4db;
+    .display-name:hover,
+    .username:hover {
+      color: #55a4db;
     }
   }
-  p{
+  p {
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: 12px;
@@ -524,22 +524,20 @@
     flex: 1;
     line-height: 1.5;
   }
-  .pink-text{
+  .pink-text {
     font-size: 12px;
     font-weight: 300;
     text-transform: none;
     text-decoration: none;
-
   }
-  &__bottom{
+  &__bottom {
     display: flex;
     justify-content: left;
-    gap:10px;
-   
-      
-    .retweet{
+    gap: 10px;
+
+    .retweet {
       position: relative;
-      p{
+      p {
         position: absolute;
         top: -24px;
         left: 18px;
@@ -547,24 +545,94 @@
     }
   }
 }
-.twitter-card-icon{
+.twitter-card-icon {
   margin-right: 5px;
-  & img{
+  & img {
     width: 13.5px;
     height: 12.5px;
     max-width: 100%;
   }
 }
-.twitter-logo{
+.twitter-logo {
   position: absolute;
-  top:16px;
+  top: 16px;
   right: 16px;
   height: 16px;
-
 }
-// .testimonials .container{
-//   display: flex;
-// }
+// marketting section
+.market {
+  background: url("./images/asset 63.jpeg");
+  background-position: right center;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  color: white;
+  position: relative;
+  
+  
+  img {
+    margin-left: -40px;
+  }
+  h1 {
+    z-index: 999;
+    max-width: max(300px, 50%);
+    display: block;
+    margin-bottom: 20px;
+    font-size: 34px;
+    color: #eeeeee;
+  }
+  p {
+    max-width: 50%;
+    display: block;
+    margin-bottom: 20px;
+    color: #eeeeee;
+    line-height: 1.5;
+    font-weight: 300;
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+  .cta-btn {
+    padding: 18px 34px;
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  @media screen and (max-width:961px){
+    background-position: 70% center ;
+    
+    
+  }
+}
+// Insights Section
+.Insight {
+  padding:100px 0 ;
+  background: #181818;
+  color: rgb(255, 255, 255);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    h1{
+      font-size: 40px;
+      @media screen and (max-width: 641px) {
+        text-align: center;
+      }
+    }
+    .decorated{
+      margin: 0 80px 20px;
+      min-width: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media screen and (max-width:1024px) {
+      flex-direction: column;
+      align-items: center;
+      gap:25px
+      
+    }
+  }
+}
 
 // Utility classes
 .container {
@@ -576,11 +644,14 @@
   transition: 0.4s;
   transform: rotateX(180deg);
 }
-.centered{
+.centered {
   text-align: center;
 }
 .lg {
   padding: 15px 32px;
+}
+.xl{
+  padding: 18px 34px;
 }
 .pink-text {
   color: #ec008c;
